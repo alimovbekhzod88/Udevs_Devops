@@ -1,0 +1,1 @@
+kubectl get pods -n s-30 --selector=project=practice > result

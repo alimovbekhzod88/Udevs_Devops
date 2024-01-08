@@ -1,0 +1,9 @@
+kubectl run nginx1 --image nginx -n s-30
+kubectl run nginx2 --image nginx -n s-30
+
+kubectl get pod nginx2 -o yaml -n s-30 > nginx1.yaml
+kubectl get pod nginx2 -o yaml -n s-30 > nginx2.yaml
+
+
+kubectl apply -f nginx1.yaml -n st-30
+kubectl apply -f nginx2.yaml -n st-30

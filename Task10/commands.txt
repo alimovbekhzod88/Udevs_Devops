@@ -1,0 +1,3 @@
+kubectl create deployment task10 --image nvrbckdown/flask-app:practice-2 -n s-30
+
+kubectl port-forward --address localhost pod/task10-7bdc454f5b-vhzp6 5000:5000 -n s-30

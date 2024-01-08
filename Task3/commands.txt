@@ -1,0 +1,4 @@
+kubectl run busybox --image busybox -n s-30
+
+kubectl describe pod busybox -n s-30 > result
+

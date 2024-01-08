@@ -1,0 +1,8 @@
+kubectl exec -it nginx1 -n s-30 -- sh
+#
+# curl 10.233.61.58
+{"env":"staging","http_port":"80","string":"Pod"}
+# curl 10.233.61.58:80/practice
+{"author":"devops","message":"Well DONE!"}
+#
+

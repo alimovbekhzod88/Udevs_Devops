@@ -1,0 +1,7 @@
+kubectl expose deploy task10 --port=80 --target-port=5000 --type=NodePort -n s-30
+
+kubectl get service -n s-30
+
+kubectl get nodes -o wide
+
+curl http://95.217.7.185:31511 > result

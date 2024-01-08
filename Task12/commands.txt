@@ -1,0 +1,2 @@
+kubectl expose deployment task10 --type=ClusterIP --port=80 --target-port=5000 --name=task10 -n s-30
+

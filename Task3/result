@@ -1,0 +1,60 @@
+Name:             busybox
+Namespace:        s-30
+Priority:         0
+Service Account:  default
+Node:             node4/95.217.135.101
+Start Time:       Mon, 08 Jan 2024 20:38:52 +0500
+Labels:           run=busybox
+Annotations:      <none>
+Status:           Running
+IP:               10.233.65.212
+IPs:
+  IP:  10.233.65.212
+Containers:
+  busybox:
+    Container ID:   containerd://221370faefbf47f87271ebc1aa0204b643be8ab5fb98be97fb7d883d970a8803
+    Image:          busybox
+    Image ID:       docker.io/library/busybox@sha256:ba76950ac9eaa407512c9d859cea48114eeff8a6f12ebaa5d32ce79d4a017dd8
+    Port:           <none>
+    Host Port:      <none>
+    State:          Waiting
+      Reason:       CrashLoopBackOff
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Mon, 08 Jan 2024 20:44:42 +0500
+      Finished:     Mon, 08 Jan 2024 20:44:42 +0500
+    Ready:          False
+    Restart Count:  6
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-c8vjr (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             False 
+  ContainersReady   False 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-c8vjr:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                     From               Message
+  ----     ------     ----                    ----               -------
+  Normal   Scheduled  8m23s                   default-scheduler  Successfully assigned s-30/busybox to node4
+  Normal   Pulled     8m22s                   kubelet            Successfully pulled image "busybox" in 856ms (856ms including waiting)
+  Normal   Pulled     8m21s                   kubelet            Successfully pulled image "busybox" in 817ms (817ms including waiting)
+  Normal   Pulled     8m4s                    kubelet            Successfully pulled image "busybox" in 804ms (804ms including waiting)
+  Normal   Created    7m37s (x4 over 8m22s)   kubelet            Created container busybox
+  Normal   Started    7m37s (x4 over 8m22s)   kubelet            Started container busybox
+  Normal   Pulled     7m37s                   kubelet            Successfully pulled image "busybox" in 810ms (810ms including waiting)
+  Normal   Pulling    6m44s (x5 over 8m23s)   kubelet            Pulling image "busybox"
+  Warning  BackOff    3m13s (x25 over 8m20s)  kubelet            Back-off restarting failed container busybox in pod busybox_s-30(70217d99-fc6e-466a-b39b-b4413ad720c8)
